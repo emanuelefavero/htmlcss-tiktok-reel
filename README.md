@@ -1,6 +1,6 @@
 # HTML/CSS TikTok Reel
 
-This project is a static HTML and CSS exercise based on a TikTok Reel-inspired reference design provided during my web development course.
+This project is a CSS Flexbox exercise based on a TikTok Reel-inspired reference design provided during my web development course.
 
 > Note: The goal of the exercise is to recreate the layout using the HTML and CSS topics covered in class, with particular focus on Flexbox for arranging the header, footer, and sidebar.
 
