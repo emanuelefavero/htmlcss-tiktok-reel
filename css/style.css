@@ -1,3 +1,4 @@
+/* BASE */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,19 @@ body {
   font-family: 'TikTok Sans', sans-serif;
 }
 
+/* Button Reset */
+button {
+  border-radius: 0;
+  text-align: inherit;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
 video {
   height: 100%;
   width: 100%;
@@ -17,36 +31,78 @@ video {
   object-fit: cover;
 }
 
+i {
+  color: white;
+}
+
+/* Page Container */
 .reel-page {
-  height: 100vh; /* ti incuriosisce? */
+  height: 100vh;
   max-width: 512px;
   min-width: 400px;
   position: relative;
 }
 
+/* Header */
 .reel-header {
   position: absolute;
-  align-items: center;
-  justify-content: space-between;
   top: 0;
   left: 0;
   right: 0;
 
-  /* Inserisci qui sotto 
-	le tue regole, se necessario. */
-}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+  padding: 1rem 1.15rem;
 
-/* Footer */
+  /* Left and right icons */
+  i {
+    font-size: 1.2rem;
+  }
 
-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: #fff;
+  /* Buttons menu */
+  nav {
+    display: flex;
+    gap: 0.625rem;
 
-  /* Inserisci qui sotto 
-	le tue regole, se necessario. */
+    button {
+      position: relative;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: rgba(255, 255, 255, 0.5);
+
+      /* New content indicator */
+      &.new-content::after {
+        content: '';
+        position: absolute;
+        top: -0.2rem;
+        right: -0.4rem;
+        width: 0.38rem;
+        height: 0.38rem;
+        background-color: rgba(241, 32, 74, 0.4);
+        border-radius: 50%;
+      }
+
+      /* Active button */
+      &.active {
+        color: #fff;
+
+        /* Active button bottom border */
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -0.4rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50%;
+          height: 2px;
+          background-color: #fff;
+        }
+      }
+    }
+  }
 }
 
 /* Sidebar */
@@ -60,10 +116,26 @@ footer {
 	le tue regole, se necessario. */
 }
 
+/* Footer */
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+
+  /* Inserisci qui sotto 
+	le tue regole, se necessario. */
+}
+
 /* ---------------------
-Regole per evidenziare i blocchi 
-da rimuovere una volta concluso
+DEBUG MODE
 --------------------- */
+/* .debug .reel-header {
+  min-height: 50px;
+  border: 2px dashed #fff;
+} */
+
 .debug footer {
   min-height: 100px;
   border: 2px dashed #fff;
@@ -74,10 +146,4 @@ da rimuovere una volta concluso
   min-height: 450px;
   border: 2px dashed #ff0;
 }
-
-.debug .reel-header {
-  min-height: 50px;
-  border: 2px dashed #fff;
-}
-
 /* --------------------- */
