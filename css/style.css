@@ -1,3 +1,31 @@
+:root {
+  /* Colors */
+  --background: #000;
+  --foreground: #fff;
+  --foreground-muted: hsla(0, 0%, 100%, 0.5);
+  --foreground-soft: hsla(0, 0%, 100%, 0.8);
+  --muted: #918d8d;
+  --primary: #ff3d5e;
+  --primary-soft: hsla(348, 89%, 54%, 0.4);
+
+  /* Sizes */
+  --page-max: 512px;
+  --page-min: 400px;
+  --footer-item: 68px;
+
+  /* Utilities */
+  --radius-full: 999px;
+  --tracking-tight: -0.02em;
+
+  /* Icons */
+  --icon-sm: 1.2rem;
+  --icon-md: 1.25rem;
+  --icon-lg: 1.5rem;
+
+  /* Font */
+  --font-sans: 'TikTok Sans', sans-serif;
+}
+
 /* BASE */
 * {
   margin: 0;
@@ -7,7 +35,7 @@
 
 body {
   margin: 0 auto;
-  font-family: 'TikTok Sans', sans-serif;
+  font-family: var(--font-sans);
 }
 
 /* Button Reset */
@@ -38,14 +66,14 @@ video {
 }
 
 i {
-  color: white;
+  color: var(--foreground);
 }
 
 /* Page Container */
 .reel-page {
   height: 100vh;
-  max-width: 512px;
-  min-width: 400px;
+  max-width: var(--page-max);
+  min-width: var(--page-min);
   position: relative;
 }
 
@@ -64,7 +92,7 @@ i {
 
   /* Left and right icons */
   i {
-    font-size: 1.2rem;
+    font-size: var(--icon-sm);
   }
 
   /* Navigation buttons */
@@ -76,8 +104,8 @@ i {
       position: relative;
       font-size: 0.875rem;
       font-weight: 600;
-      letter-spacing: -0.02em;
-      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: var(--tracking-tight);
+      color: var(--foreground-muted);
 
       /* New content indicator */
       &.new-content::after {
@@ -87,13 +115,13 @@ i {
         right: -0.4rem;
         width: 0.38rem;
         height: 0.38rem;
-        background-color: rgba(241, 32, 74, 0.4);
+        background-color: var(--primary-soft);
         border-radius: 50%;
       }
 
       /* Active button */
       &.active {
-        color: #fff;
+        color: var(--foreground);
 
         /* Active button bottom border */
         &::after {
@@ -104,7 +132,7 @@ i {
           transform: translateX(-50%);
           width: 50%;
           height: 2px;
-          background-color: #fff;
+          background-color: var(--foreground);
         }
       }
     }
@@ -129,7 +157,7 @@ i {
     /* Avatar */
     .avatar-link {
       img {
-        background-color: white;
+        background-color: var(--foreground);
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -144,9 +172,9 @@ i {
       bottom: -0.3rem;
       left: 50%;
       transform: translateX(-50%);
-      width: 1.2rem;
-      height: 1.2rem;
-      background-color: #ff3b5c;
+      width: var(--icon-sm);
+      height: var(--icon-sm);
+      background-color: var(--primary);
       line-height: 1;
       display: flex;
       align-items: center;
@@ -155,7 +183,7 @@ i {
 
       .plus {
         display: inline-block;
-        color: #fff;
+        color: var(--foreground);
         font-size: 1.3rem;
         font-weight: 600;
         position: relative;
@@ -171,13 +199,13 @@ i {
     align-items: center;
 
     i {
-      font-size: 1.5rem;
+      font-size: var(--icon-lg);
     }
 
     span {
       font-size: 0.75rem;
       font-weight: 700;
-      color: rgba(255, 255, 255, 0.8);
+      color: var(--foreground-soft);
     }
   }
 }
@@ -188,7 +216,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  color: #fff;
+  color: var(--foreground);
 
   /* Bottom Overlay */
   .bottom-overlay {
@@ -201,7 +229,7 @@ footer {
     .username {
       font-size: 0.875rem;
       font-weight: 600;
-      letter-spacing: -0.02em;
+      letter-spacing: var(--tracking-tight);
     }
 
     p.description {
@@ -218,7 +246,7 @@ footer {
 
   /* Footer actions */
   nav {
-    background-color: black;
+    background-color: var(--background);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -226,12 +254,12 @@ footer {
     gap: 0.25rem;
 
     button {
-      width: 68px;
+      width: var(--footer-item);
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: rgb(144, 140, 140);
+      color: var(--muted);
 
       /* Icon */
       .icon-slot {
@@ -241,7 +269,7 @@ footer {
         justify-content: center;
 
         i {
-          font-size: 1.25rem;
+          font-size: var(--icon-md);
           color: inherit;
         }
 
@@ -253,25 +281,25 @@ footer {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          background-color: #ff3b5c;
-          color: #fff;
+          background-color: var(--primary);
+          color: var(--foreground);
           font-size: 0.625rem;
           font-weight: 700;
           padding: 0.03rem 0.25rem;
-          border-radius: 999px;
+          border-radius: var(--radius-full);
         }
       }
 
       /* Label */
       .label {
         font-size: 0.563rem;
-        letter-spacing: -0.02em;
+        letter-spacing: var(--tracking-tight);
         font-weight: 500;
       }
 
       /* Active button state */
       &.active {
-        color: #fff;
+        color: var(--foreground);
 
         .label {
           font-weight: 700;
@@ -292,12 +320,12 @@ DEBUG MODE
 --------------------- */
 .debug .reel-header {
   min-height: 50px;
-  border: 2px dashed #fff;
+  border: 2px dashed var(--foreground);
 }
 
 .debug footer {
   min-height: 130px;
-  border: 2px dashed #fff;
+  border: 2px dashed var(--foreground);
 }
 
 .debug .sidebar {
