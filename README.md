@@ -4,6 +4,10 @@ This project is a CSS Flexbox exercise based on a TikTok Reel-inspired reference
 
 > Note: The goal of the exercise is to recreate the layout using the HTML and CSS topics covered in class, with particular focus on Flexbox for arranging the header, footer, and sidebar.
 
+## Live Demo
+
+[View the live demo on GitHub Pages](https://emanuelefavero.github.io/htmlcss-tiktok-reel/)
+
 ## Reference Design
 
 <img src="assets/img/screencapture.png" alt="screenshot" width="400">
