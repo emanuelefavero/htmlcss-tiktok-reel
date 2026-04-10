@@ -31,8 +31,10 @@
 
       <!-- Header -->
       <header class="reel-header">
-        <!-- Play icon -->
-        <i class="bi bi-play-btn"></i>
+        <!-- Play button -->
+        <button aria-label="Play">
+          <i class="bi bi-play-btn"></i>
+        </button>
 
         <!-- Navigation buttons -->
         <nav>
@@ -41,15 +43,17 @@
           <button class="active">Per te</button>
         </nav>
 
-        <!-- Search icon -->
-        <i class="bi bi-search"></i>
+        <!-- Search button -->
+        <button aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
       </header>
 
       <!-- Sidebar -->
-      <div class="sidebar">
+      <section class="sidebar">
         <div class="sidebar-item profile">
-          <!-- Profile link -->
-          <a href="" class="profile-link">
+          <!-- Avatar -->
+          <a href="" class="avatar-link">
             <img src="assets/img/boolean_logo.png" alt="User profile picture" />
           </a>
 
@@ -59,26 +63,26 @@
           </button>
         </div>
 
-        <button>
+        <button aria-label="Like video">
           <i class="bi bi-heart-fill"></i>
           <span>588</span>
         </button>
 
-        <button>
+        <button aria-label="Read or add comments">
           <i class="bi bi-chat-dots-fill"></i>
           <span>13</span>
         </button>
 
-        <button>
+        <button aria-label="Add to Favorites">
           <i class="bi bi-bookmark-fill"></i>
           <span>638</span>
         </button>
 
-        <button>
+        <button aria-label="Share video">
           <i class="bi bi-sign-turn-slight-right-fill"></i>
           <span>491</span>
         </button>
-      </div>
+      </section>
 
       <!-- Footer -->
       <footer></footer>
