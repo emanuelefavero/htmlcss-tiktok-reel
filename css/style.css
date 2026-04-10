@@ -190,8 +190,78 @@ footer {
   bottom: 0;
   color: #fff;
 
-  /* Inserisci qui sotto 
-	le tue regole, se necessario. */
+  /* Footer actions */
+  nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 0.25rem;
+
+    button {
+      width: 68px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgb(144, 140, 140);
+
+      /* Icon */
+      i {
+        font-size: 1.25rem;
+        color: inherit;
+      }
+
+      /* Label */
+      .label {
+        font-size: 0.563rem;
+        letter-spacing: -0.02em;
+        font-weight: 500;
+      }
+
+      .icon-badge {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      sup {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(45%, -30%);
+        min-width: 1rem;
+        height: 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ff3b5c;
+        color: #fff;
+        font-size: 0.625rem;
+        font-weight: 600;
+        line-height: 1;
+        padding: 0 0.25rem;
+        border-radius: 999px;
+      }
+
+      /* Active button state */
+      &.active {
+        color: #fff;
+
+        .label {
+          font-weight: 700;
+        }
+      }
+
+      /* Create button */
+      &.create {
+        position: relative;
+        top: -0.4rem;
+      }
+    }
+  }
 }
 
 /* ---------------------
