@@ -23,6 +23,12 @@ button {
   font: inherit;
 }
 
+/* Link Reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 video {
   height: 100%;
   width: 100%;
@@ -61,7 +67,7 @@ i {
     font-size: 1.2rem;
   }
 
-  /* Buttons menu */
+  /* Navigation buttons */
   nav {
     display: flex;
     gap: 0.625rem;
@@ -107,13 +113,73 @@ i {
 
 /* Sidebar */
 .sidebar {
-  padding: 0 16px;
+  padding: 0 1rem;
   position: absolute;
   right: 0;
   top: 40%;
 
-  /* Inserisci qui sotto 
-	le tue regole, se necessario. */
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  /* Profile actions  */
+  .profile {
+    position: relative;
+
+    /* Profile link */
+    .profile-link {
+      img {
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        padding: 0.1rem;
+      }
+    }
+
+    /* Follow button */
+    .follow-button {
+      position: absolute;
+      bottom: -0.3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: #ff004f;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      .plus {
+        display: inline-block;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+
+  /* Sidebar buttons */
+  button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    span {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
 }
 
 /* Footer */
@@ -137,13 +203,13 @@ DEBUG MODE
 } */
 
 .debug footer {
-  min-height: 100px;
+  min-height: 130px;
   border: 2px dashed #fff;
 }
 
-.debug .sidebar {
+/* .debug .sidebar {
   min-width: 80px;
   min-height: 450px;
   border: 2px dashed #ff0;
-}
+} */
 /* --------------------- */
