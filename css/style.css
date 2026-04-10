@@ -10,7 +10,7 @@
 
   /* Sizes */
   --page-max: 512px;
-  --page-min: 400px;
+  --page-min: 300px;
   --footer-item: 68px;
 
   /* Utilities */
@@ -31,6 +31,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 body {
@@ -71,7 +76,7 @@ i {
 
 /* PAGE CONTAINER */
 .reel-page {
-  height: 100vh;
+  height: 100dvh;
   max-width: var(--page-max);
   min-width: var(--page-min);
   position: relative;
