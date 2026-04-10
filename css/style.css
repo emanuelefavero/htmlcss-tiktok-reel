@@ -49,7 +49,7 @@ i {
   position: relative;
 }
 
-/* Header */
+/* HEADER */
 .reel-header {
   position: absolute;
   top: 0;
@@ -111,7 +111,7 @@ i {
   }
 }
 
-/* Sidebar */
+/* SIDEBAR */
 .sidebar {
   padding: 0 1rem;
   position: absolute;
@@ -182,7 +182,7 @@ i {
   }
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   position: absolute;
   left: 0;
@@ -190,13 +190,39 @@ footer {
   bottom: 0;
   color: #fff;
 
+  /* Bottom Overlay */
+  .bottom-overlay {
+    padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+
+    > :not(:first-child) {
+      margin-top: 0.3rem;
+    }
+
+    .username {
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    p.description {
+      max-width: 33ch;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1.4;
+
+      button.expand {
+        font-weight: 700;
+      }
+    }
+  }
+
   /* Footer actions */
   nav {
     background-color: black;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.45rem 0;
     gap: 0.25rem;
 
     button {
@@ -264,19 +290,19 @@ footer {
 /* ---------------------
 DEBUG MODE
 --------------------- */
-/* .debug .reel-header {
+.debug .reel-header {
   min-height: 50px;
   border: 2px dashed #fff;
-} */
+}
 
 .debug footer {
   min-height: 130px;
   border: 2px dashed #fff;
 }
 
-/* .debug .sidebar {
+.debug .sidebar {
   min-width: 80px;
   min-height: 450px;
   border: 2px dashed #ff0;
-} */
+}
 /* --------------------- */
