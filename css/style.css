@@ -26,7 +26,7 @@
   --font-sans: 'TikTok Sans', sans-serif;
 }
 
-/* BASE */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +38,6 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Button Reset */
 button {
   border-radius: 0;
   text-align: inherit;
@@ -51,7 +50,6 @@ button {
   font: inherit;
 }
 
-/* Link Reset */
 a {
   text-decoration: none;
   color: inherit;
@@ -69,7 +67,9 @@ i {
   color: var(--foreground);
 }
 
-/* Page Container */
+/* //////////////////// */
+
+/* PAGE CONTAINER */
 .reel-page {
   height: 100vh;
   max-width: var(--page-max);
@@ -90,7 +90,7 @@ i {
   gap: 0.625rem;
   padding: 1rem 1.15rem;
 
-  /* Left and right icons */
+  /* Play and Search icons */
   i {
     font-size: var(--icon-sm);
   }
@@ -155,7 +155,7 @@ i {
     position: relative;
 
     /* Avatar */
-    .avatar-link {
+    a.avatar-link {
       img {
         background-color: var(--foreground);
         width: 40px;
@@ -167,7 +167,7 @@ i {
     }
 
     /* Follow button */
-    .follow-button {
+    button.follow-button {
       position: absolute;
       bottom: -0.3rem;
       left: 50%;
@@ -222,16 +222,19 @@ footer {
   .bottom-overlay {
     padding: 0.5rem 0.75rem 0.75rem 0.75rem;
 
+    /* Space between username and description */
     > :not(:first-child) {
       margin-top: 0.3rem;
     }
 
+    /* Username */
     .username {
       font-size: 0.875rem;
       font-weight: 600;
       letter-spacing: var(--tracking-tight);
     }
 
+    /* Description */
     p.description {
       max-width: 33ch;
       font-size: 0.75rem;
@@ -261,9 +264,24 @@ footer {
       align-items: center;
       color: var(--muted);
 
+      /* Active button state */
+      &.active {
+        color: var(--foreground);
+
+        .label {
+          font-weight: 700;
+        }
+      }
+
+      /* Middle Create button (+) */
+      &.create {
+        position: relative;
+        top: -0.4rem;
+      }
+
       /* Icon */
       .icon-slot {
-        position: relative; /* To position the notification badge */
+        position: relative; /* ? To position the .notification-badge ⬇ */
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -273,6 +291,7 @@ footer {
           color: inherit;
         }
 
+        /* Notification Badge */
         sup.notification-badge {
           position: absolute;
           top: 0;
@@ -290,47 +309,27 @@ footer {
         }
       }
 
-      /* Label */
+      /* Button Label */
       .label {
         font-size: 0.563rem;
         letter-spacing: var(--tracking-tight);
         font-weight: 500;
       }
-
-      /* Active button state */
-      &.active {
-        color: var(--foreground);
-
-        .label {
-          font-weight: 700;
-        }
-      }
-
-      /* Create button (+) */
-      &.create {
-        position: relative;
-        top: -0.4rem;
-      }
     }
   }
 }
 
-/* ---------------------
-DEBUG MODE
---------------------- */
+/* ----------- DEBUG MODE ----------- */
 .debug .reel-header {
   min-height: 50px;
   border: 2px dashed var(--foreground);
 }
-
 .debug footer {
   min-height: 130px;
   border: 2px dashed var(--foreground);
 }
-
 .debug .sidebar {
   min-width: 80px;
   min-height: 450px;
-  border: 2px dashed #ff0;
+  border: 2px dashed #f0f;
 }
-/* --------------------- */
