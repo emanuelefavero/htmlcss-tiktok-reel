@@ -146,7 +146,7 @@ i {
 
 /* SIDEBAR */
 .sidebar {
-  padding: 0 1rem;
+  padding: 0;
   position: absolute;
   right: 0;
   top: 40%;
@@ -157,6 +157,7 @@ i {
   /* Profile actions  */
   .profile {
     position: relative;
+    padding: 0 1rem;
 
     /* Avatar */
     a.avatar-link {
@@ -197,10 +198,11 @@ i {
   }
 
   /* Sidebar buttons */
-  button {
+  > button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 1rem;
 
     i {
       font-size: var(--icon-lg);
