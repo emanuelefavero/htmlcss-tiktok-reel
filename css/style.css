@@ -11,6 +11,7 @@
   /* Sizes */
   --page-max: 512px;
   --page-min: 348px;
+  --footer-nav-height: calc(49px + 0.9rem);
 
   /* Utilities */
   --radius-full: 999px;
@@ -152,10 +153,10 @@ i {
 
 /* SIDEBAR */
 .sidebar {
-  padding: 0;
+  padding-bottom: 4.375rem;
   position: absolute;
   right: 0;
-  top: 40%;
+  bottom: var(--footer-nav-height);
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
