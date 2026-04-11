@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,13 +27,19 @@
   <body>
     <!-- Container della pagina, necessario per via del layout particolare -->
     <div class="reel-page">
-      <video src="assets/video/coder.mp4" autoplay muted loop></video>
+      <video
+        src="assets/video/coder.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
 
       <!-- Header -->
       <header class="reel-header">
         <!-- Play button -->
         <button type="button" class="play" aria-label="Riproduci">
-          <i class="bi bi-play-btn"></i>
+          <i class="bi bi-play-btn" aria-hidden="true"></i>
         </button>
 
         <!-- Navigation buttons -->
@@ -45,7 +51,7 @@
 
         <!-- Search button -->
         <button type="button" class="search" aria-label="Cerca">
-          <i class="bi bi-search"></i>
+          <i class="bi bi-search" aria-hidden="true"></i>
         </button>
       </header>
 
@@ -53,8 +59,13 @@
       <div class="sidebar">
         <div class="profile">
           <!-- Avatar -->
-          <a href="" class="avatar-link">
-            <img src="assets/img/boolean_logo.png" alt="User profile picture" />
+          <a href="#" class="avatar-link">
+            <img
+              src="assets/img/boolean_logo.png"
+              alt="User profile picture"
+              width="40"
+              height="40"
+            />
           </a>
 
           <!-- Follow button -->
@@ -64,22 +75,22 @@
         </div>
 
         <button type="button" aria-label="Metti mi piace al video">
-          <i class="bi bi-heart-fill"></i>
+          <i class="bi bi-heart-fill" aria-hidden="true"></i>
           <span>588</span>
         </button>
 
         <button type="button" aria-label="Leggi o aggiungi commenti">
-          <i class="bi bi-chat-dots-fill"></i>
+          <i class="bi bi-chat-dots-fill" aria-hidden="true"></i>
           <span>13</span>
         </button>
 
         <button type="button" aria-label="Aggiungi ai preferiti">
-          <i class="bi bi-bookmark-fill"></i>
+          <i class="bi bi-bookmark-fill" aria-hidden="true"></i>
           <span>638</span>
         </button>
 
         <button type="button" aria-label="Condividi video">
-          <i class="bi bi-sign-turn-slight-right-fill"></i>
+          <i class="bi bi-sign-turn-slight-right-fill" aria-hidden="true"></i>
           <span>491</span>
         </button>
       </div>
@@ -88,9 +99,9 @@
       <footer>
         <!-- Bottom overlay (username and description) -->
         <div class="bottom-overlay">
-          <a href="" class="username">boolean.careers</a>
+          <a href="#" class="username">boolean.careers</a>
           <p class="description">
-            Prova il Fundamentals Camp. 20 ore di corso gratuito per...
+            Prova il Fundamentals Camp. 20 ore di corso gratuito per…
             <button type="button" class="expand">Vedi altro</button>
           </p>
         </div>
@@ -100,7 +111,7 @@
           <!-- Home button -->
           <button type="button" class="home active">
             <span class="icon-slot">
-              <i class="bi bi-house-fill"></i>
+              <i class="bi bi-house-fill" aria-hidden="true"></i>
             </span>
             <span class="label">Home</span>
           </button>
@@ -108,7 +119,7 @@
           <!-- Friends button -->
           <button type="button" class="friends">
             <span class="icon-slot">
-              <i class="bi bi-people"></i>
+              <i class="bi bi-people" aria-hidden="true"></i>
             </span>
             <span class="label">Amici</span>
           </button>
@@ -119,13 +130,14 @@
             class="create"
             aria-label="Crea nuovo contenuto"
           >
-            <!-- TIP: I copied this SVG from the TikTok website with chrome dev tools, see https://www.tiktok.com/ -->
+            <!-- Create button icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 75 49"
               width="100%"
               height="100%"
+              aria-hidden="true"
             >
               <path
                 fill="#D8D8D8"
@@ -166,7 +178,7 @@
           <!-- Inbox button -->
           <button type="button" class="inbox">
             <span class="icon-slot">
-              <i class="bi bi-chat-square"></i>
+              <i class="bi bi-chat-square" aria-hidden="true"></i>
               <sup class="notification-badge">19</sup>
             </span>
             <span class="label">Posta in arrivo</span>
@@ -175,7 +187,7 @@
           <!-- Profile button -->
           <button type="button" class="profile">
             <span class="icon-slot">
-              <i class="bi bi-person"></i>
+              <i class="bi bi-person" aria-hidden="true"></i>
             </span>
             <span class="label">Profilo</span>
           </button>
