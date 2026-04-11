@@ -1,28 +1,38 @@
 # HTML/CSS TikTok Reel
 
-This project is a CSS Flexbox exercise based on a TikTok Reel-inspired reference design provided during my web development course.
+> Tip: Code decisions are explained in the [Implementation Notes](#implementation-notes)
 
-> Note: The goal of the exercise is to recreate the layout using the HTML and CSS topics covered in class, with particular focus on Flexbox for arranging the header, footer, and sidebar.
+Static TikTok Reel interface recreated with HTML and CSS for a web development course exercise.
 
 ## Live Demo
 
 [View the live demo on GitHub Pages](https://emanuelefavero.github.io/htmlcss-tiktok-reel/)
 
-## Reference Design
+## Exercise Goal
+
+Match the provided reference layout using HTML and CSS, with a focus on Flexbox.
+
+### Reference layout
 
 <img src="assets/img/screencapture.png" alt="screenshot" width="400">
 
 ## Scope
 
-- Static TikTok Reel interface
-- Built with plain HTML and CSS
-- Course exercise focused on layout and element positioning with Flexbox
-- Header, footer, and sidebar are the main areas to implement
-- Bootstrap Icons are used for the interface icons
-- TikTok Sans is the reference font for the exercise
-- Images and videos are stored in the `assets/` directory
-- `index.html` contains the markup, and `css/style.css` contains the styles
-- No JavaScript functionality is included as it is outside the scope of the exercise
+- Use HTML and CSS
+- No JavaScript
+- Mobile-first layout with `512px` width
+- Work within Header, Sidebar, Footer from the boilerplate (see first commit in the repo)
+- Bootstrap Icons for icons and TikTok Sans font for text.
+
+## Implementation Notes
+
+- The original boilerplate structure was preserved, using `.reel-page`, `.reel-header`, `.sidebar`, and `footer` as the main layout areas.
+- Flexbox is used to align the header navigation, sidebar actions, and footer navigation.
+- CSS custom properties keep repeated colors, icon sizes, and layout values easy to adjust.
+- CSS nesting is used intentionally because the project is small and does not need a reusable design system. Keeping selectors close to their parent sections makes the stylesheet easier to compare with the HTML structure.
+- Accessibility details were added for icon-only controls, decorative icons, image dimensions, language metadata, and mobile video behavior.
+- The footer "Create" SVG icon was adapted from TikTok's web UI to stay close to the reference design.
+- Button spacing is kept compact while preserving a larger clickable area for better mobile usability, using padding and flexbox to manage layout without fixed widths.
 
 &nbsp;
 
