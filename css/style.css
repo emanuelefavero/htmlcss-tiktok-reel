@@ -93,6 +93,7 @@ i {
   align-items: center;
   justify-content: space-between;
   gap: 0.625rem;
+  padding: 0.2rem 0;
 
   /* Play and Search buttons */
   > button {
@@ -106,9 +107,10 @@ i {
   /* Navigation buttons */
   nav {
     display: flex;
+    gap: 0.33rem;
 
     button {
-      padding: 1rem 0.33rem;
+      padding: 0 0.33rem;
       position: relative;
       font-size: 0.875rem;
       font-weight: 600;
@@ -120,7 +122,7 @@ i {
         content: '';
         position: absolute;
         top: -0.2rem;
-        right: -0.4rem;
+        right: -0.05rem;
         width: 0.38rem;
         height: 0.38rem;
         background-color: var(--primary-soft);
@@ -135,7 +137,7 @@ i {
         &::after {
           content: '';
           position: absolute;
-          bottom: 0.4rem;
+          bottom: -0.4rem;
           left: 50%;
           transform: translateX(-50%);
           width: 50%;
