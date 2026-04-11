@@ -93,7 +93,6 @@ i {
   align-items: center;
   justify-content: space-between;
   gap: 0.625rem;
-  padding: 0.2rem 0;
 
   /* Play and Search buttons */
   > button {
@@ -110,7 +109,7 @@ i {
     gap: 0.33rem;
 
     button {
-      padding: 0 0.33rem;
+      padding: 1rem 0.33rem;
       position: relative;
       font-size: 0.875rem;
       font-weight: 600;
@@ -121,8 +120,8 @@ i {
       &.new-content::after {
         content: '';
         position: absolute;
-        top: -0.2rem;
-        right: -0.05rem;
+        top: 0.8rem;
+        right: -0.08rem;
         width: 0.38rem;
         height: 0.38rem;
         background-color: var(--primary-soft);
@@ -137,11 +136,11 @@ i {
         &::after {
           content: '';
           position: absolute;
-          bottom: -0.4rem;
+          bottom: 0.6rem;
           left: 50%;
           transform: translateX(-50%);
-          width: 50%;
-          height: 2px;
+          width: 40%;
+          height: 2.5px;
           background-color: var(--foreground);
         }
       }
