@@ -93,19 +93,22 @@ i {
   align-items: center;
   justify-content: space-between;
   gap: 0.625rem;
-  padding: 1rem 1.15rem;
 
-  /* Play and Search icons */
-  i {
-    font-size: var(--icon-sm);
+  /* Play and Search buttons */
+  > button {
+    padding: 1rem 1.15rem;
+
+    i {
+      font-size: var(--icon-sm);
+    }
   }
 
   /* Navigation buttons */
   nav {
     display: flex;
-    gap: 0.625rem;
 
     button {
+      padding: 1rem 0.33rem;
       position: relative;
       font-size: 0.875rem;
       font-weight: 600;
@@ -132,7 +135,7 @@ i {
         &::after {
           content: '';
           position: absolute;
-          bottom: -0.4rem;
+          bottom: 0.4rem;
           left: 50%;
           transform: translateX(-50%);
           width: 50%;
