@@ -38,7 +38,8 @@
 }
 
 body {
-  margin: 0 auto;
+  display: grid;
+  place-items: start center;
   font-family: var(--font-sans);
   color: var(--foreground);
   background-color: var(--background);
