@@ -342,17 +342,13 @@ footer {
 
 /* ----------- DEBUG MODE ----------- */
 .debug .reel-header {
-  min-height: 50px;
   border: 2px dashed var(--foreground);
 }
 
 .debug footer {
-  min-height: 130px;
   border: 2px dashed var(--foreground);
 }
 
 .debug .sidebar {
-  min-width: 80px;
-  min-height: 450px;
-  border: 2px dashed #f0f;
+  border: 2px dashed var(--primary);
 }
