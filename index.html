@@ -32,19 +32,19 @@
       <!-- Header -->
       <header class="reel-header">
         <!-- Play button -->
-        <button class="play" aria-label="Play">
+        <button type="button" class="play" aria-label="Riproduci">
           <i class="bi bi-play-btn"></i>
         </button>
 
         <!-- Navigation buttons -->
-        <nav>
-          <button>Esplora</button>
-          <button class="new-content">Seguiti</button>
-          <button class="active">Per te</button>
+        <nav aria-label="Navigazione contenuti">
+          <button type="button">Esplora</button>
+          <button type="button" class="new-content">Seguiti</button>
+          <button type="button" class="active">Per te</button>
         </nav>
 
         <!-- Search button -->
-        <button class="search" aria-label="Search">
+        <button type="button" class="search" aria-label="Cerca">
           <i class="bi bi-search"></i>
         </button>
       </header>
@@ -58,27 +58,27 @@
           </a>
 
           <!-- Follow button -->
-          <button class="follow-button" aria-label="Follow user">
+          <button type="button" class="follow-button" aria-label="Segui utente">
             <span class="plus">+</span>
           </button>
         </div>
 
-        <button aria-label="Like video">
+        <button type="button" aria-label="Metti mi piace al video">
           <i class="bi bi-heart-fill"></i>
           <span>588</span>
         </button>
 
-        <button aria-label="Read or add comments">
+        <button type="button" aria-label="Leggi o aggiungi commenti">
           <i class="bi bi-chat-dots-fill"></i>
           <span>13</span>
         </button>
 
-        <button aria-label="Add to Favorites">
+        <button type="button" aria-label="Aggiungi ai preferiti">
           <i class="bi bi-bookmark-fill"></i>
           <span>638</span>
         </button>
 
-        <button aria-label="Share video">
+        <button type="button" aria-label="Condividi video">
           <i class="bi bi-sign-turn-slight-right-fill"></i>
           <span>491</span>
         </button>
@@ -91,14 +91,14 @@
           <a href="" class="username">boolean.careers</a>
           <p class="description">
             Prova il Fundamentals Camp. 20 ore di corso gratuito per...
-            <button class="expand">Vedi altro</button>
+            <button type="button" class="expand">Vedi altro</button>
           </p>
         </div>
 
         <!-- Footer actions -->
-        <nav>
+        <nav aria-label="Navigazione principale">
           <!-- Home button -->
-          <button class="home active">
+          <button type="button" class="home active">
             <span class="icon-slot">
               <i class="bi bi-house-fill"></i>
             </span>
@@ -106,7 +106,7 @@
           </button>
 
           <!-- Friends button -->
-          <button class="friends">
+          <button type="button" class="friends">
             <span class="icon-slot">
               <i class="bi bi-people"></i>
             </span>
@@ -114,7 +114,11 @@
           </button>
 
           <!-- Create button -->
-          <button class="create" aria-label="Create new content">
+          <button
+            type="button"
+            class="create"
+            aria-label="Crea nuovo contenuto"
+          >
             <!-- TIP: I copied this SVG from the TikTok website with chrome dev tools, see https://www.tiktok.com/ -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +164,7 @@
           </button>
 
           <!-- Inbox button -->
-          <button class="inbox">
+          <button type="button" class="inbox">
             <span class="icon-slot">
               <i class="bi bi-chat-square"></i>
               <sup class="notification-badge">19</sup>
@@ -169,7 +173,7 @@
           </button>
 
           <!-- Profile button -->
-          <button class="profile">
+          <button type="button" class="profile">
             <span class="icon-slot">
               <i class="bi bi-person"></i>
             </span>
