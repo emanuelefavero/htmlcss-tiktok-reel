@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
     <title>Bool Tok</title>
+    <meta
+      name="description"
+      content="Interfaccia Reel TikTok realizzata con HTML e CSS"
+    />
+    <meta name="author" content="Emanuele Favero" />
+
+    <!-- Favicon -->
     <link rel="icon" href="assets/img/booltok_logo.png" />
 
     <!-- Bootstrap Icons -->
@@ -25,7 +33,7 @@
   </head>
 
   <body>
-    <!-- Container della pagina, necessario per via del layout particolare -->
+    <!-- PAGE CONTAINER -->
     <div class="reel-page">
       <video
         src="assets/video/coder.mp4"
@@ -35,7 +43,7 @@
         playsinline
       ></video>
 
-      <!-- Header -->
+      <!-- HEADER -->
       <header class="reel-header">
         <!-- Play button -->
         <button type="button" class="play" aria-label="Riproduci">
@@ -55,7 +63,7 @@
         </button>
       </header>
 
-      <!-- Sidebar -->
+      <!-- SIDEBAR -->
       <div class="sidebar">
         <div class="profile">
           <!-- Avatar -->
@@ -95,7 +103,7 @@
         </button>
       </div>
 
-      <!-- Footer -->
+      <!-- FOOTER -->
       <footer>
         <!-- Bottom overlay (username and description) -->
         <div class="bottom-overlay">
@@ -130,7 +138,7 @@
             class="create"
             aria-label="Crea nuovo contenuto"
           >
-            <!-- Create button icon -->
+            <!-- Create button SVG icon (adapted from TikTok's web UI) -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
