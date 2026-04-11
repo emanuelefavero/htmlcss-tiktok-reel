@@ -1,12 +1,12 @@
 :root {
   /* Colors */
-  --background: #000;
-  --foreground: #fff;
-  --foreground-muted: hsla(0, 0%, 100%, 0.5);
-  --foreground-soft: hsla(0, 0%, 100%, 0.8);
-  --muted: #918d8d;
-  --primary: #ff3d5e;
-  --primary-soft: hsla(348, 89%, 54%, 0.4);
+  --background: oklch(0% 0 0);
+  --foreground: oklch(100% 0 0);
+  --foreground-muted: oklch(100% 0.01 271 / 0.5);
+  --foreground-soft: oklch(100% 0.01 271 / 0.8);
+  --muted: oklch(65% 0.01 16);
+  --primary: oklch(66% 0.227 17);
+  --primary-soft: oklch(62% 0.23 18 / 0.4);
 
   /* Sizes */
   --page-max: 512px;
@@ -88,7 +88,6 @@ i {
   top: 0;
   left: 0;
   right: 0;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -150,7 +149,6 @@ i {
   position: absolute;
   right: 0;
   top: 40%;
-
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -225,7 +223,7 @@ footer {
 
   /* Bottom Overlay */
   .bottom-overlay {
-    padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+    padding: 0.5rem 0.75rem 0.75rem;
 
     /* Space between username and description */
     > :not(:first-child) {
@@ -333,10 +331,12 @@ footer {
   min-height: 50px;
   border: 2px dashed var(--foreground);
 }
+
 .debug footer {
   min-height: 130px;
   border: 2px dashed var(--foreground);
 }
+
 .debug .sidebar {
   min-width: 80px;
   min-height: 450px;
