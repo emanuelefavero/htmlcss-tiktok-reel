@@ -166,7 +166,7 @@ i {
     padding: 0 1rem;
 
     /* Avatar */
-    a.avatar-link {
+    .avatar-link {
       img {
         background-color: var(--foreground);
         width: 40px;
@@ -178,7 +178,7 @@ i {
     }
 
     /* Follow button */
-    button.follow-button {
+    .follow-button {
       position: absolute;
       bottom: -0.3rem;
       left: 50%;
@@ -251,13 +251,13 @@ footer {
     }
 
     /* Description */
-    p.description {
+    .description {
       max-width: 33ch;
       font-size: 0.75rem;
       font-weight: 600;
       line-height: 1.4;
 
-      button.expand {
+      .expand {
         font-weight: 700;
       }
     }
@@ -311,7 +311,7 @@ footer {
         }
 
         /* Notification Badge */
-        sup.notification-badge {
+        .notification-badge {
           position: absolute;
           top: 0;
           right: 0;
