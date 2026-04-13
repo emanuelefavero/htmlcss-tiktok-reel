@@ -258,7 +258,6 @@ footer {
     /* Description */
     .description {
       max-width: 33ch;
-      /* font-size: 0.75rem; */
       font-size: 0.76rem;
       font-weight: 600;
       line-height: 1.4;
@@ -313,7 +312,7 @@ footer {
           translate: 0 -0.4rem;
 
           i {
-            -webkit-text-stroke: 0.15px currentColor; /* slightly bolder */
+            -webkit-text-stroke: 0.15px currentcolor; /* slightly bolder */
             font-size: var(--icon-md);
             color: var(--off-black);
           }
