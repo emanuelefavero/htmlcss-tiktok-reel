@@ -11,8 +11,8 @@
   --brand-pink: oklch(70% 0.32 328);
   --left-right-gradient: linear-gradient(
     90deg,
-    oklch(90% 0.15 194) 0%,
-    oklch(70% 0.32 328) 100%
+    var(--brand-cyan) 0%,
+    var(--brand-pink) 100%
   );
   --off-black: oklch(23% 0 271);
 
