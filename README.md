@@ -32,7 +32,6 @@ Match the provided reference layout using HTML and CSS, with a focus on Flexbox.
 - The sidebar no longer uses `top: 40%`; it is anchored from the bottom so the actions stay above the footer navigation, closer to TikTok's layout.
 - CSS nesting is used intentionally because the project is small and does not need a reusable design system. Keeping selectors close to their parent sections makes the stylesheet easier to compare with the HTML structure.
 - Accessibility details were added for icon-only controls, decorative icons, image dimensions, language metadata, and mobile video behavior.
-- The footer "Create" SVG icon was adapted from TikTok's web UI to stay close to the reference design.
 - Button spacing is kept compact while preserving a larger clickable area for better mobile usability, using padding and flexbox to manage layout without fixed widths.
 
 &nbsp;

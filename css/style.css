@@ -7,6 +7,9 @@
   --muted: oklch(65% 0.01 16);
   --primary: oklch(66% 0.227 17);
   --primary-soft: oklch(62% 0.23 18 / 0.4);
+  --brand-cyan: oklch(90% 0.15 194);
+  --brand-pink: oklch(70% 0.32 328);
+  --off-black: oklch(23% 0 271);
 
   /* Sizes */
   --page-max: 512px;
@@ -243,7 +246,7 @@ footer {
 
     /* Username */
     .username {
-      font-size: 0.875rem;
+      font-size: 0.76rem;
       font-weight: 700;
       letter-spacing: var(--tracking-tight);
 
@@ -255,7 +258,8 @@ footer {
     /* Description */
     .description {
       max-width: 33ch;
-      font-size: 0.75rem;
+      /* font-size: 0.75rem; */
+      font-size: 0.76rem;
       font-weight: 600;
       line-height: 1.4;
 
@@ -271,10 +275,11 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
+    padding: 0 0.25rem;
 
     button {
       flex: 1;
-      padding: 0.45rem 0;
+      padding: 0.85rem 0;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -293,10 +298,25 @@ footer {
 
       /* Middle Create button (+) */
       &.create {
-        svg {
-          width: 75px;
-          height: 49px;
+        .plus {
+          width: 2.375rem;
+          height: 1.563rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-weight: 600;
+          border-radius: 0.5rem;
+          background-color: var(--foreground);
+          border-left: 3px solid var(--brand-cyan);
+          border-right: 3px solid var(--brand-pink);
           translate: 0 -0.4rem;
+
+          i {
+            -webkit-text-stroke: 0.15px currentColor; /* slightly bolder */
+            font-size: var(--icon-md);
+            color: var(--off-black);
+          }
         }
       }
 
