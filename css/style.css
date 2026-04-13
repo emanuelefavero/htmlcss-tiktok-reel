@@ -9,6 +9,11 @@
   --primary-soft: oklch(62% 0.23 18 / 0.4);
   --brand-cyan: oklch(90% 0.15 194);
   --brand-pink: oklch(70% 0.32 328);
+  --left-right-gradient: linear-gradient(
+    90deg,
+    oklch(90% 0.15 194) 0%,
+    oklch(70% 0.32 328) 100%
+  );
   --off-black: oklch(23% 0 271);
 
   /* Sizes */
@@ -297,19 +302,39 @@ footer {
 
       /* Middle Create button (+) */
       &.create {
+        --plus-button-width: 2.2rem;
+        --plus-button-height: 1.625rem;
+        --plus-offset-y: 0.4rem;
+        --plus-radius: 0.48rem;
+
+        position: relative;
+
+        /* ? Create button left and right borders
+        Avoided `border-left` and `border-right` due to iOS Safari rendering issue */
+        &::before {
+          content: '';
+          width: calc(var(--plus-button-width) + 6px);
+          height: var(--plus-button-height);
+          position: absolute;
+          inset: 0;
+          margin: auto;
+          translate: 0 calc(-1 * var(--plus-offset-y));
+          border-radius: var(--plus-radius);
+          background: var(--left-right-gradient);
+        }
+
         .plus {
-          width: 2.375rem;
-          height: 1.563rem;
+          width: var(--plus-button-width);
+          height: var(--plus-button-height);
+          position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
           text-align: center;
           font-weight: 600;
-          border-radius: 0.5rem;
+          translate: 0 calc(-1 * var(--plus-offset-y));
+          border-radius: var(--plus-radius);
           background-color: var(--foreground);
-          border-left: 3px solid var(--brand-cyan);
-          border-right: 3px solid var(--brand-pink);
-          translate: 0 -0.4rem;
 
           i {
             -webkit-text-stroke: 0.15px currentcolor; /* slightly bolder */

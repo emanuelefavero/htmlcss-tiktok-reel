@@ -33,6 +33,7 @@ Match the provided reference layout using HTML and CSS, with a focus on Flexbox.
 - CSS nesting is used intentionally because the project is small and does not need a reusable design system. Keeping selectors close to their parent sections makes the stylesheet easier to compare with the HTML structure.
 - Accessibility details were added for icon-only controls, decorative icons, image dimensions, language metadata, and mobile video behavior.
 - Button spacing is kept compact while preserving a larger clickable area for better mobile usability, using padding and flexbox to manage layout without fixed widths.
+- After testing on mobile Safari, `border-left` and `border-right` were replaced with a single background gradient for the create button to avoid rendering issues.
 
 &nbsp;
 
