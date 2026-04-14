@@ -162,18 +162,19 @@ i {
 
 /* SIDEBAR */
 .sidebar {
-  padding-bottom: 4.375rem;
   position: absolute;
   right: 0;
   bottom: var(--footer-nav-height);
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  padding-bottom: 4.375rem;
+
+  > :not(:first-child) {
+    margin-top: 0.6rem;
+  }
 
   /* Profile actions  */
   .profile {
     position: relative;
-    padding: 0 1rem;
+    text-align: center;
 
     /* Avatar */
     .avatar-link {
@@ -218,7 +219,8 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1rem;
+    text-align: center;
+    padding: 0.6rem 1rem;
 
     i {
       font-size: var(--icon-lg);
