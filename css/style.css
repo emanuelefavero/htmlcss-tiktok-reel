@@ -3,7 +3,6 @@
   --background: oklch(0% 0 0);
   --foreground: oklch(100% 0 0);
   --foreground-muted: oklch(100% 0.01 271 / 0.5);
-  --foreground-soft: oklch(100% 0.01 271 / 0.8);
   --muted: oklch(65% 0.01 16);
   --primary: oklch(66% 0.227 17);
   --primary-soft: oklch(62% 0.23 18 / 0.4);
@@ -197,10 +196,8 @@ i {
       width: var(--icon-sm);
       height: var(--icon-sm);
       background-color: var(--primary);
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      line-height: var(--icon-sm); /* vertically center the plus sign */
+      text-align: center;
       border-radius: 50%;
 
       .plus {
@@ -216,9 +213,7 @@ i {
 
   /* Sidebar buttons */
   > button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
     text-align: center;
     padding: 0.6rem 1rem;
 
@@ -227,9 +222,9 @@ i {
     }
 
     span {
+      display: block;
       font-size: 0.75rem;
       font-weight: 700;
-      color: var(--foreground-soft);
     }
   }
 }
